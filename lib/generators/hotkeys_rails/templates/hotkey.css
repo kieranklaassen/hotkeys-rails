@@ -1,0 +1,16 @@
+kbd {
+  border: 1px solid currentColor;
+  border-radius: 0.3em;
+  box-shadow: 0 0.1em 0 currentColor;
+  font-family: ui-monospace, monospace;
+  font-size: 0.8em;
+  font-weight: 600;
+  opacity: 0.7;
+  padding: 0 0.4em;
+}
+
+@media (any-hover: none) {
+  .hide-on-touch {
+    display: none;
+  }
+}
