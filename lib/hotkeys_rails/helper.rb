@@ -38,6 +38,8 @@ module HotkeysRails
         when "esc"   then "Esc"
         else key.to_s.upcase
         end
+      # Mac symbols (⌘⌥⇧) don't need + separator, Windows modifiers do (Ctrl+, Alt+, Shift+)
+      # gsub removes trailing + from Mac symbols: "⌘+" -> "⌘"
       end.join.gsub(/[⌘⌥⇧]\+/, &:chop)
     end
 
@@ -51,9 +53,15 @@ module HotkeysRails
     end
 
     def link_to(name = nil, options = nil, html_options = nil, &block)
-      html_options, options, name = options, name, block if block_given?
-      html_options = extract_hotkey_option(html_options)
-      super(name, options, html_options, &block)
+      if block_given?
+        # link_to(url, html_options) { content }
+        html_options = extract_hotkey_option(options)
+        super(name, html_options, &block)
+      else
+        # link_to(name, url, html_options)
+        html_options = extract_hotkey_option(html_options)
+        super(name, options, html_options)
+      end
     end
 
     def button_to(name = nil, options = nil, html_options = nil, &block)

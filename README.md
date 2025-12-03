@@ -63,6 +63,16 @@ The `:ctrl` modifier binds both Ctrl (Windows/Linux) and Cmd (Mac).
 - `hotkey_label(*keys)` - Platform-aware label (⌘ on Mac, Ctrl+ elsewhere)
 - `hotkey_hint(*keys)` - Renders `<kbd>` element with hide-on-touch class
 
+## How It Works
+
+This gem overrides `link_to`, `button_to`, and `button_tag` to support the `:hotkey` option. When you use `hotkey: :esc`, it extracts the option and merges the Stimulus data attributes into the element.
+
+If you prefer explicit control, use the `hotkey()` helper directly:
+
+```erb
+<%= link_to "Back", root_path, data: hotkey(:esc) %>
+```
+
 ## License
 
 MIT
