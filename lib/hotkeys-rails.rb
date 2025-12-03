@@ -1,0 +1,1 @@
+require "hotkeys_rails"
