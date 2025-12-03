@@ -1,0 +1,54 @@
+Started GET "/" for ::1 at 2025-12-02 19:55:50 -0800
+Processing by PagesController#home as */*
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 0.5ms | GC: 0.0ms)
+Completed 200 OK in 6ms (Views: 2.8ms | GC: 0.2ms)
+
+
+Started GET "/" for ::1 at 2025-12-02 19:56:01 -0800
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 0.3ms | GC: 0.0ms)
+Completed 200 OK in 1ms (Views: 0.5ms | GC: 0.0ms)
+
+
+Started GET "/favicon.ico" for ::1 at 2025-12-02 19:56:01 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/clicked" for ::1 at 2025-12-02 19:56:05 -0800
+Processing by PagesController#clicked as HTML
+  Rendering text template
+  Rendered text template (Duration: 0.0ms | GC: 0.0ms)
+Completed 200 OK in 1ms (Views: 0.6ms | GC: 0.0ms)
+
+
+Started GET "/" for ::1 at 2025-12-02 19:56:09 -0800
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.4ms | GC: 0.3ms)
+  Rendered layout layouts/application.html.erb (Duration: 0.5ms | GC: 0.3ms)
+Completed 200 OK in 1ms (Views: 0.7ms | GC: 0.3ms)
+
+
+Started GET "/" for ::1 at 2025-12-02 19:56:18 -0800
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.5ms | GC: 0.3ms)
+  Rendered layout layouts/application.html.erb (Duration: 0.5ms | GC: 0.3ms)
+Completed 200 OK in 1ms (Views: 0.7ms | GC: 0.3ms)
+
+
+Started GET "/clicked" for ::1 at 2025-12-02 19:56:32 -0800
+Processing by PagesController#clicked as HTML
+  Rendering text template
+  Rendered text template (Duration: 0.0ms | GC: 0.0ms)
+Completed 200 OK in 1ms (Views: 0.5ms | GC: 0.3ms)
+
+

@@ -4,3 +4,4 @@ gemspec
 
 gem "rake"
 gem "minitest"
+gem "puma"

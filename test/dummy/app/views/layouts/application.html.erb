@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Hotkeys Rails Demo</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <style>
+    body { font-family: system-ui, sans-serif; max-width: 600px; margin: 40px auto; padding: 0 20px; }
+    h1 { margin-bottom: 30px; }
+    .demo-section { margin-bottom: 30px; }
+    .demo-section h2 { font-size: 1.1rem; margin-bottom: 10px; }
+    a, button { font-size: 1rem; padding: 8px 16px; margin-right: 10px; }
+    kbd { background: #f0f0f0; border: 1px solid #ccc; border-radius: 3px; padding: 2px 6px; font-size: 0.9em; }
+    input[type="text"] { padding: 8px; font-size: 1rem; width: 200px; }
+    #result { margin-top: 20px; padding: 10px; background: #e8f5e9; border-radius: 4px; display: none; }
+  </style>
+</head>
+<body>
+  <%= yield %>
+  <script type="module">
+    import { Application, Controller } from "https://unpkg.com/@hotwired/stimulus/dist/stimulus.js"
+
+    const app = Application.start()
+
+    app.register("hotkey", class extends Controller {
+      click(event) {
+        event.preventDefault()
+        this.element.click()
+      }
+
+      focus(event) {
+        event.preventDefault()
+        this.element.focus()
+      }
+    })
+  </script>
+</body>
+</html>

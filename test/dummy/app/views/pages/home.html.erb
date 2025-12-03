@@ -1,0 +1,34 @@
+<h1>Hotkeys Rails Demo</h1>
+
+<div class="demo-section">
+  <h2>Simple Hotkey</h2>
+  <%= link_to "Go to Clicked Page", clicked_path, hotkey: :g, id: "simple-link" %>
+  <span>Press <kbd>G</kbd></span>
+</div>
+
+<div class="demo-section">
+  <h2>Escape Key</h2>
+  <%= link_to "Back", root_path, hotkey: :esc, id: "esc-link" %>
+  <span>Press <kbd>Esc</kbd></span>
+</div>
+
+<div class="demo-section">
+  <h2>Modifier Key (Ctrl/Cmd)</h2>
+  <%= button_tag "Save", hotkey: [:ctrl, :s], id: "save-btn", onclick: "document.getElementById('result').style.display='block'; document.getElementById('result').textContent='Saved!'; return false;" %>
+  <span>Press <%= hotkey_hint(:ctrl, :s) %></span>
+</div>
+
+<div class="demo-section">
+  <h2>Focus Action</h2>
+  <%= text_field_tag :search, nil, placeholder: "Search...", id: "search-input", data: hotkey(:f, action: :focus) %>
+  <span>Press <kbd>F</kbd> to focus</span>
+</div>
+
+<div class="demo-section">
+  <h2>Block Syntax</h2>
+  <%= link_to clicked_path, hotkey: :c, id: "block-link" do %>
+    Cards <%= hotkey_hint(:c) %>
+  <% end %>
+</div>
+
+<div id="result"></div>
