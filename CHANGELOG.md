@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.1.1] - 2024-12-03
+
+### Fixed
+
+- Bundler auto-loading now works without explicit `require: "hotkeys_rails"` in Gemfile ([#1](https://github.com/kieranklaassen/hotkeys-rails/issues/1))
+
 ## [0.1.0] - 2024-12-02
 
 Initial release.
