@@ -1,5 +1,8 @@
 # Hotkeys Rails
 
+[![Gem Version](https://badge.fury.io/rb/hotkeys-rails.svg)](https://badge.fury.io/rb/hotkeys-rails)
+[![CI](https://github.com/kieranklaassen/hotkeys-rails/actions/workflows/ci.yml/badge.svg)](https://github.com/kieranklaassen/hotkeys-rails/actions/workflows/ci.yml)
+
 Keyboard shortcuts for Hotwire apps. No dependencies. No configuration. Just HTML.
 
 ## Installation
